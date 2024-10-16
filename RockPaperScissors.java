@@ -9,15 +9,22 @@ public class RockPaperScissors {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        String[] choices = {"Rock \uD83E\uDEA8", "Paper \uD83D\uDCC4", "Scissors \u2702"};
+        String[] choices = {"Rock", "Paper", "Scissors"};
 
         while (true) {
             clearScreen();
-            printWithTypingEffect("Choose (1) Rock \uD83E\uDEA8, (2) Paper \uD83D\uDCC4, (3) Scissors \u2702, or (0) Exit:");
+            printWithTypingEffect("Choose (1)Rock, (2)Paper, (3)Scissors, or (0)Exit: ");
             int userChoice = getUserChoice(scanner);
 
             if (userChoice == 0) {
-                break;
+                printWithTypingEffect("Are you sure you want to exit? (Y/N): ");
+                scanner.nextLine();  // consume the newline left by nextInt()
+                String exitConfirmation = scanner.nextLine();
+                if (exitConfirmation.equalsIgnoreCase("Y")) {
+                    break;
+                } else {
+                    continue;
+                }
             }
 
             if (userChoice < 1 || userChoice > 3) {
@@ -79,38 +86,25 @@ public class RockPaperScissors {
                 return scanner.nextInt();
             } catch (InputMismatchException e) {
                 printWithTypingEffect("Invalid input. Please enter a number.\n");
-                scanner.next(); 
+                scanner.next();  // clear invalid input
             }
         }
     }
 
     private static void waitForEnter(Scanner scanner) {
-        try {
-            scanner.nextLine(); 
-            scanner.nextLine();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+        scanner.nextLine();  // this consumes the newline character left by previous input
     }
 
     private static void clearScreen() {
-        try {
-            String os = System.getProperty("os.name").toLowerCase();
-            if (os.contains("win")) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            } else {
-                new ProcessBuilder("clear").inheritIO().start().waitFor();
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+        System.out.print("\033[H\033[2J");  // ANSI escape code to clear the terminal
+        System.out.flush();
     }
 
     private static void printWithTypingEffect(String message) {
         for (char ch : message.toCharArray()) {
             System.out.print(ch);
             try {
-                Thread.sleep(10); 
+                Thread.sleep(10);  // adjust delay here for typing speed
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
