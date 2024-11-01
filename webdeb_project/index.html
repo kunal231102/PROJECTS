@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMix</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sidebars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<body onload="myFunction()">
+    <div id="loading"></div>
+
+    <!-- Day 2 -->
+    <div class="modal-box" id="modalbox">
+        <div class="modal">
+            <div id="close-btn">&times;</div>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="log" onclick="login()">Log-in</button>
+                <button type="button" class="log" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="">
+                <img src="https://w7.pngwing.com/pngs/421/879/png-transparent-twitter-logo-social-media-iphone-organization-logo-twitter-computer-network-leaf-media.png" alt="">
+                <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png" alt="">
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="password" class="input-field" placeholder="Enter password" required>
+                <input type="checkbox" class="check-box"><span class="terms">Remember Password</span> 
+                <button type="submit" id="submit-btn">Log-in</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Enter password" required>
+                <input type="checkbox" class="check-box"><span class="terms">I agree to the terms and conditions</span> 
+                <button type="submit" id="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav">
+            <img src="LOGOB.png" alt="App logo">
+            <div></div>
+
+            <div id="pick_address" class="pincode">
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/ic_express%20delivery.svg?dim=16x0"
+                        alt="lightning icon">
+                    <p>Express delivery to</p>
+                </div>
+                <h4> your location</h4>
+                <i class="fa-solid fa-location-plus"></i>
+            </div>
+
+            <div class="download_app">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Download App</p>
+            </div>
+
+            <ul>
+                <li id="open_login">
+                    <i class="fa-regular fa-user"></i>
+                    <button id="open-btn">Hello, Log In</button>
+                </li>
+                <li>
+                    <a href="offers.html">
+                        <i class="fa-regular fa-percent"></i>
+                        <p>Offers</p>
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="search-layout">
+        <div>
+            <br/>
+            <div class="search-header">
+                <h2>What are you looking for?</h2>
+                <i class="fa-solid fa-clipboard-list"></i>
+                <p>Order with prescription.</p>
+                <div>
+                    <h3>UPLOAD NOW</h3>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+
+            </div>
+            <form class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for medicine">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="nav-card-layout container">
+        <div>
+            <div>
+                <a href="addtocart.html"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-11/25/full/1669400288-0753.jpg"></a>
+                <h4>Medicines</h4>
+                <p>UPTO 40% OFF</p>
+            </div>
+
+            <div>
+                <a href="addtocart.html"><img src="https://res.fkhealthplus.com/incom/images/product/LIFEBUOY-COOL-FRESH-HANDWASH-1447830802-10022041.jpg"></a>
+                <h4>Healthcare</h4>
+                <p>UPTO 70% OFF</p>
+            </div>
+            <div>
+                <a href="labtest.html"><img src="https://media.istockphoto.com/id/953131832/photo/electrolyte-testing.jpg?s=612x612&w=0&k=20&c=926Jtp40QGHiPgXOgAD69-CHg1tBZPLBFZgFld2t35Q="></a>
+                <h4>Lab Tests</h4>
+                <p>UPTO 70% OFF</p>
+            </div>
+            <div>
+                <a href="labtest.html"><img src="https://cdn1.vectorstock.com/i/1000x1000/96/55/health-care-icon-on-white-background-flat-style-vector-21809655.jpg"></a>
+                <h4>PLUS</h4>
+                <p>SAVE 10% EXTRA</p>
+            </div>
+            <div>
+                <a href="offers.html"><img src="https://5.imimg.com/data5/FD/QJ/EW/SELLER-75969164/handmade-explosion-gift-box.jpg"></a>
+                <h4>Offers</h4>
+                <p></p>
+            </div>
+            <div>
+                <a href="labtest.html"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExQWFhUVGBcaGBgYGBoXGBcaGBcXGh0aGBodHSggGxolHRcdITEiJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQkAvgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAwQFBgcCAQj/xABCEAABAwEFBAYIBAQGAgMAAAABAAIRAwQSITFBBVFhcQYTIoGRoQcjMkKxwdHwUnKS4RRiwvEVM1OisrNDcxYkNf/EABoBAAIDAQEAAAAAAAAAAAAAAAAEAgMFAQb/xAA3EQABBAADBAgFAgYDAAAAAAABAAIDEQQhMRJBUWEFcYGRobHR8BMiIzLBFOEVQmNygvEGM1L/2gAMAwEAAhEDEQA/ANxQhCEIQhCEIQhCEIQhCEIQhMrbaruDc9Tu/dAC4TQtOnvAEkwmtS3D3RKjWkuMuMj7w5ItNSFMNVRkO5K2u2vwggb8Yj6lcUdpObmbw4/VRbq7DeJm8044x3oZVG+BE/ehXSAq9pytVntLXiQeY1CXVVp1i1wc0wdB96KdsFuFQRk4Zj6KBCua+9U9QhC4rEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQkLRWDATrBgckIuknabXdkDE+QUNVlw1EnMcdUg2uTJznPnmum1vZjMNPjER4SrmsSjpQc05Lg1pxwHioK2W57ndlpLcoyPMJxaNow4scMSAcOeE7p+SVbaqLID+xOV4gSrjGW5lLCUOyBVf2lQrOqdZTAgNAc04XxrPdHEIstCrTmHFzCCWNyjeMjGBhT38XSAJb24yDcS4cNOE8E3rWpoJ9XUjObvlGc90KsmO6J8Vc1spFhvgvLFa+sAu4YGZOUaZfROrFXdgRgQJG9Vu3VQSLj7pGOrXHhBGPJOdkWt5Av+1BEtkiBvOh4HeouYQLGYQ2QXRyPA/haJY699od4804UBsOuQ8tOTviJ+Sn1UU4w2EIQhcUkIQhCEIQhCEIQhCEIQhCEIQhCEKF2paBjuiP3U0qntlzqbnCJ1HI5fRWRi3UqMQ7ZbaZWuqRBpkYZjDHmFzaLQS0YEE4yAYkcsvvNV/am2qzTdp0GSTLSQXc5GRUZa6dauRRLroPaqBoAutOTW9mQXYiZ0J1Cf2WxML3bllbbp3iOMZnrFc0/2c5z31S0FznGL2YAAgF53ics4VgsWzWsxi845udiT45DgFD2fqKLborGm1ojsw1o5L2lt59My1za9PWCL4WLicY6d1nIbgvRYLo9mFbQzO8n3krU1q9gJtZNpMqNDm5HxTi+1LWE6m9rs1N7S1zQeBxCg7NSFGrddJY7LHUSbrjqPoVPVmHRQ22WnqyfeGI5jEfBWQTmJ4O7f1KjE4cTR1v3Hn++9WGxmHNdI9sZY5nLuHwVqVI2NaC9rDoS2O8jLmrutCVuy6ll4d2020IQhVphCEIQhCEIQhCEIQhCEIQhCEIQhCqe3ba0VHSCbpjTKBI5K2KudIrC0TVOToB3gxAI4K2KtrNUYkEsyVP2lbqAF+46WiYjGRiDOimdi2SzvptqsmmarWvN6HDtNHvDLd3KHtVhp1ajaYc7tZiTAGpOGY04wrGAKeDIDQGgAQQABAjhhHcmZ4w9gb2pDCyujkc4VuG7nf4Vf6T9DHvIqU3PAEyKZkGeQvDfh3qmUdhVaQdfrGo5sBgk3s8S4vcSCNwN04yAtao1Rp2Tw+8U5eGv9oMqfmAnuOiznYUtyB8PZWwzGBxtw7j7Cp3Rmw1JIfhIkRiFF7f6ROp1HU2kgjCQJ8AtGo0KbTg27yMjunFQO0ejbXvLw9k3i8Co0gAnjj4pY4dw3WnG4ph311qj7K6Suc6HWwcoGe4n5KwWq2F1N14h0Aw4YaahQ1o9G1QhwY2bwAa7rA/qwP9Ml0jXCCPNSlHozVs1ncHFz3XC32Y5cJUXR5gC8+Sk2XIk1lwI/2pXolg2k0xILNSdRPfvWiKj7GoiBjiB4YeCuzcgtTEG3krEwYqIBdIQhUptCEIQhCEIQhCEIQhCEIQhCEIQhCb2sNLHB8XIN6dycLhzARBEg5goQsXr7Y/h67u0LuIBOcTqVPUbV12LcHe7jAeBEjhjMTrwMrv0l2elTpVA1serJdq03g4AAHLLzCrez6k0KdYH1dUSCMblT3hxEg8xPBa0UrZTW/wBheengfALObbzrd6dfGlbLPVc7LA7oIKfU6rwMWzyxULs7pG5vYrtDwPezdByM6gj+6nqe0mkXmMJbrdMuHNhg+ChK0jIhXQSNcLDvDP8APmuKG0L0xIjfn4JRtvf+Fp+KY7Ut76gHVMvDUiBHAk5dyhbRTtQEtbHAH91xsQdwHapPxBZxPUFZ3WpuZZHf+yj7VtRwjq7/ALQbid8nDHOAVBUnVgQaxuN/mME8mjHxw4qSeRUpMY3EXr05E4ESRpnkuOga0WuNxRfkMj4qc2XRgNGrnAffIK3qs9GNngG/EXcBxO/73qzJF+q1IB8toQhCgrkIQhCEIQhCEIQhCEIQhCEIQhCEIQhCFlfpga53qgD6wN8BI+J8lAbJtYs9JtKo29RcIeNROo4grWek1ppspG81r3Gbgc0Og74O5ZraLCC2DlEFVunMcgLdysbhhLE5rtD79jekhSpy1lR5LDjSrNzAPDUTm05HEZ4ylClVsvaPraR1boPy/SQqh1rrM4seHOouM4e006ObPvaRkU+sG2qjRFN4fTOkS3va7Fp4fEYrcZKJmW05HUe9CvMyYd2HfsvFEaEeHW3rVh2nba90VaNVgYdWtk95MqF/xS3VP/K66M3YMYPAYngASg7WqTAAknINJJO+MZI71K7F6O1rWbzz2AYIBgb4cR/xbwkhWWyNtupVn4sslMvmLNeenJRrRfdfHbLcDUODAdzRPad482qe2VZCHM6ue26HSZxJzVkZ0ObGNQ4YNAaAxo4Nn5p5YOjraT2vvzGl2J80jLimuFDRPw4J7TZUxZqIY0NGQHjxSyEJFa6EIQhCEIQhCEIQhCEIQhCEITO27RpUf8x7W8CcTyGZXQCTQXCa1TxCq20umVFtN/VS6pBugtIaTpOsKo7W6b2mqxjWxSz6wsJlx/lJxaPNMx4OV+6uv3aXkxcTN99S0LbG3aFmANV0E5NAlx7tBxKrNX0gtc9rKVIgOMXnmOXZH1We167nEkkk7yZJSLnExCeb0czZpxs8ffBIv6QftZDLz7Vo9tLnkueZJ+8Nyh6zF10e2p1rQx/ttH6gNee9O7ZQheYmhfC8sfr7zXqIZWSsDmaHw5Kv7Ssoe0yFUbVZH03TTJnTH5hX+rSwnxUVXoNOgQyVzDbSQuyQskFOAKr9le/3iVvWwbI2lZ6TGRAYDI1JEk95MrE69CDko7ZPSq0Wes9tCq5rWvIuntMJwJBacMZ57oTuFDp3kE51vSGL2MOwENyvdXevo5CzfY3pRY4XbRRcHx/4ocHHg1xF3xKn9i9PbFaXdW2oWVPwVWmme6cD4ph+Hlbq0pZmIjf9rlaUIQqVchCEIQhCEIQhCEIQhJ1KgaCSYABJJyAGqUVY9IVrNOxPu5vc1vd7RHeGkd6kxhe4NG9Re7ZaXcFE7U6bioXU7MbsYFxEO7mn2eZ8lUKtodelxJJOJJknmSoilaPWAz2KsQRmyoMPA7jmpG0OkC8Ic0jk4SJLeGOWnx3ooWRZNHqsWSV8mZKc1zGKYVqrT2QJduEZeSd2oNLOGGP0H33qFr0rhvtIdjP91c0WqZH7KG1ZwMgruUrVohzRUbrmkw065qYKqIK6o1nNcHNMFpBBV/2RtAV6d6BIwcNx+hVALU/2NtI0KodjdODhvG/mM/7pDpDBfqI/l+4ac+XpzT/R2M/TyU77Try59nkr0bGIOkjEJhS2Y04nTMKWY8OAIIIIkEZEFcupjNeRql621WdpbK9ogZ5clntp2FWo1XvcyGPggyPax+IPkticycFA9K6XZpjQv/oem8BIWYhnWB35JXHxiTDvHInuzVHsllMyvdrUu012DXjGcuanG0gMQmW07MHCYxC9gDa8gW7IT7YnSeuwXWvcDEYT3GCCFZOivTZ4rmnaHlzHZOIBLTvkZtKzzZmFQc0vQPrCAMWkiRwMb1VJho3WCNe9TixMjaIOhX0FZ7Sx/sPa78pB+CXWLWe2OY5rmm64EY88/Jah0a2t/EUpPttgO47j3/JY8+FMQvULYhxIkNaKZQhCVTKEIQhCFSfSfV9VRZqXl36Wkf1K7LNvSnX9bRZ+Fhd+p0f0JnBi5mpfFGonLPbRTgub7rseR3jinVgtXWtLKkEtwM5g72nTDVdWtmqiy/q6gfoey75H73r0FWFggkOpTtnqR6txvSMD+IbuDh+/JKrYw0HcZg7x9Uk2qHEsJwORGY3EcU6Fa8DTeQHDWM9zhwO5RzBU6Dgmew6+JplLVaJB5KKpSysJwx++5WF4vNBUjkVGPNtFMTiuXhODRXooXguWu7JKmei217h6l57JPZP4SdOR+KtpCzX+EVx6ObVvAU6ntDBpJzG48fisHpTBazR/5D8+vfxW70ZjCPoyf4n8endwU2WKv9K8qY/mP/B6sznCFUekryatJv5yf0kBZOF/72f3DzWriL+A/wDtPkVFBJV/ZKVcIK5qtXsQvJFQbKUOlNrW/q7U7cSHeIB+akrRTghRfSSn6ym78QA7wT8iFY46KhrciCrB1w7OIwOPDslWz0c7VYKr6ZP+ZAadLzZMefksl2ztJ4DqdHOTecdDnA3mPirXsZtykyDBDWmdb2czvS0zBI0s8U1E5zCH+C3hCjOj+0haLOyrqRDuDhgfr3qTWA4FpIK22kOFhCEIXF1CyL0m1b1rePwMY3yLv61rqxPpfWv2y0H+ct/R2f6U90eLlvl+Qkseairn+CmtnioxR+0LLeaQRiJxSNgtJp1I90lTdoEiVtaFZA+YKtWSsXAT7TcCvNubWDQQMS3DDMA4Hu+gSNuYadWRk746ffAJltuiA0PE9oY/BceSGmkRtBeAdD7pGza5LA8kmapA4SJ+Su1iqdkclQ6Dos1N2+t8iFdbEZYOSi3Nvvepu+81zHcpNjEdXGI+/wB0nZ6spzK4rBS4dBCb1Waie4wfFLvMY6a8OK6cFwZIItWHYG1xVbcce2Bn+IfUaqG6UW1orhgPaDQTvg6eU+CjXVHMcCJEY4KE2w6p1xquntmcct0RwAhIx9HMbifiN0zy4H01PI0m5ekXnDGM65Z8te/Qc81Yg4GFy5Mdm2kuaJzTxxxwT9UUmDYtNbTSwUft1nq6bj7rx5g/MBTFQYKG6Uvu2Zx3Op/9rQul1C1EMs9airWwXThiWnxJVmsx7MbhHgqt1l4tG9wHhdPzViszsO8qZCqYSNVfvRdbMK1HdDx8D/Sr+sd6A7VbQrlz/ZeS0n8N4iD4jwK2JYePZszE8Vs4F+1CBwQhCEmnEL5/2harz3VPxvc7xJPzW5bZrXLPVf8AhpvI5hphYJbKbmkQCQtPo1v3HqWb0i7Jo60vaLLfZI/sldkWmZpv9oZcQkHWlzGggYapGra2Eh4N1wWsBYWXtAGwlNv7PkEt3Y7xGRUJVF+zu3t8t4PhPcrbQrCq2RnqqzbrOaVRw92qDG699/BRFnJTND5hpqoZw/8AqWf84P8AtfKuuzT2QqdZ5Nnpg+7UqT3FysbtoCiwakqMY+XsHkpPPzdrvNS4MFO2vUHR2k1w3SnbLUpbJXA8KSNTek+tu6SDlHwTM10g604EE8fv7yK5sqW2FLdY14g4HcdE2tVgvAtMmcjIwTejbWuAkQRrBHxSb9rljrrxLTkdyKKC4HVNrFfY5wjFpxBOH9lMWetOgHmm1d7SOsYQMInCDu702pVbgG84+OMrpzUR8uW5SNR0Ozwg67v2J8Ex2rBpuBhwjJ0ESMRgcM1y+uDH3oUz2m71b9IaSO7FcpdvgoezVmyL3ZuumRlkBiNMtPBWKi9UmtUJb3ye7FWehUIbeElsCTGA5nREZvJcmGzRTqxE3Wge9U8hJ+S3vZdsZVptcwzgAd4MYg8VgVgqwKY4EnuH7q89Ftt9TUEnsGA/lv7s/HelcdAZG2NRf4TOClEZo76WooXLTOK6WGtlQHTmtdsVY6kNb+p7R8JWQttIIIOBWm+kytFla38VQeAa4/GFlb6c55Fa/R7fp3xKysc76lck+szQ8EYFNrRsJhOBcPMJGhZsi1xBUhZ7RUGDhI3wZWhpokRR1ChadF9B8h2HHVOttUm1KRc3P2mniPvzUrUZTqC7h3qNdY3U5aRNM4SDlK7drhtvMeSq1iN6mf8A2fFv7pe3magG4LnZdkLatai4wWvFQfzNIzCR2hV9b4LjT8g97yulv1SO3vCd0TCdC0EKNoPkpV75KsBVTmZ5p/8AxZQ+pgHZgZjgcwmTE6sVUB0HIoUaQ+k+IYHv3GQGwcpnVJgVy26Q2NxIUnQoNa4iBGkwR5pW+C6GhsRJyUFdSiKLHslri27riCRqIE6Lx1pE4YnfMpfalpBmIOQgY5EKOYRnEICHC1KXuyCm+1bR2H8GP82Llz+wTEx9U0pt660tpe6AHv5XQI71F7q7VEDK9wzPYpnojs0XAXsDnvwF4AwCBiN2vMAK07VZTs1lNNs4tuNblmIJO8wSe/RLbFosDTWMYCGjLL4JOwWY2it19SCxmFMDLPF3EzrvE7oqLhfIeKpbtPJc7V2fUFD2nYbqVIVXOF4XQWRIAcRhM4nET3pewP11wyTjpO59SlfbHVseBGpdN3CM8fMKa2D0c7IdXz/AMCPzHfwCrnxbIY9qQ5nQb09g8PJO+mDIb93vhxVt6GbU6yl1bvapjDi3Twy8FZVUdnNZRqtcGNHukgCQHRr3A9ytywfjNlJc0VyW+YXRANcb5rOfSpW7dBk+68xzLRPl5FUCr1h9kgAeatXTe09bbakZUwGTp2RJ8HOI7lT7Vtezs9qsydzTJ5Q2St7DVHC3aNZb+eaxMQC+V2z4csk6pWJ0yah7sMz+yfU6QOBcT3/FR1htPXH1VKo4fiIDG/7jPkrFYti2hxEikxupvOcY5XAPNd/WQk0HWeWfkufpJWN2nNoc8vAm0wdZBobvEfukTReMqncYPyCtlTYNmAAeXOP5yJ/SQkH9H7O4dhz27iDPkc1IYhnPuVRYfZWf7asExVydTnHez3hy1HI71XrX7ZWrv6KOgjrgQQQQWRM55FU3afQS1MdLLtUGMjdd4O+RUviNOhXWCtfFQlkECV2wJzW2TaKYAdRqDf2SR4jBITGBwI0V4KpcM7XbQvKmBldUzJAGJOQGJKf1NiWmD6ipgJPYOX14ZrpIGqgAbXtnh7TImAM+9J1iymyQ4CcCNSV1YNm2qY/hqpGvq3xHhp96KVd0btDjP8OcYOMZ9/2UucREP5x3j1TX6eWvsPcVXm4MMOwwOAI17gU3LlandG7a440Dd/NT3R+LIJv/APBLYTgwNHF4+UqBxmHGe23vHqpjCTuNbDu4+ihL3q3d3xARsSnFao7U3B4MH1Vtsvo6tBaQ+rTbOd0OdqDrd3Kc2R0ApUnXnvfUO4w1umgx03pWTpLDAg3dcAeB7PFW/wALxL2ObVWKzI4jhZ8Exr2cvptpgx7zjlOIwHHHyT+vYqzqbaNKnAMAuBADBqRx3QM4VmsmzGU/ZaB8fFOw0BZ8vSpP2N7/ANvVNwdCAD6j+ApvqR+AVX2bHd2Gw240zGpIi6ctInmApQMeM4jmnReEhVqrMnmdK7aeVs4bDsgZsRjLvSVXJWXZVa/SaTmMDzGH796q1SopborV/wAxnEOHfgfgFzDGn1xXcS22XwXz56T7JtChaajLST1TnuNNzAW0qocSZnV29pJIPCCqMw3SDGRB8F9q2qzMqNLKjGvY7Atc0OaRuIOBVQ2n6K9lVjP8P1ZOtJ7qY/SDd8lp7Qcbcs4NrIKk7NtzKTGugGRgDEDidy8b0ndUqClTPWPPu0/iXHADjknG2ejlOhVNlxNJjWFheQTdgZnCTII7kjQr0bM25QY0fiOp4uOqc6PzZstj01dxPd/rcsjpYhsu2+Ym8w0fyjnn5a6mlNUNntLg60OvED2Jhg1M/i78MBgpRm0aIgNLTOADYPcI+CpFPr7WTdJZTGBqHKRncHvHTcMd0KybIpWazNPaJfHae9157o3buQ14pp7b1JPVok4n1uAHE6qfGK5ug4wo6z7Y61wbTB4nQDenr62QynLkNfveqSxwNJlsjHCwbC9bTzP3gvHWZpzAO+QDkuX2gAYchpkMTyXlOtI7gJ55+S6QdVwbOiVZZ2jENAOGQAz/ALpam1JVbUGjP7+/goO17aYKjSCZEzyg/NcY1ztESyMjFkq2to4TKAxVl3Stg7OM7vvkuqfSGcl5+eMMkc2tCV6nDyfFia+7sA+Csl1eEhQX+NHcuv8AFZ0VSvpTJqhcmuFCG1yk3Why5a7SnzaQmtS1qGfVck3OcuWpBoUlWtybm1qOqtKaPtN3NRpdyVgp1ZTyxbQ6p8zm0jzBVWG1QErYKzqziRu+YUm5FRdRC1lCELTWUs89KlkeG067ZIHq3NG8y5pndmO/is5sGzKlZ1+0Ou0xMU2mJwPtHMg8IW8bf2eLRZ6lLVzezwcMWnxAWHWyyV3uLWQMSDensEYEEakJmDFhhDZXUwDLLU8DXfSRxOALwX4doMhIsk6CtReV5bs60T+27fbTaGMF0DANYMTuDW6cuBTKy7ItVqN5zjQpnQQahH5ogHgN2a7o7PpWVt98uec3nPu3dy8tHSGrU7FCHbgwm6PzOGPcU4zECVhkvYZ15muNZ9n7XnPwnwJREGmSTjWTb4Xl1k3WVC7Vjsdqs1jpmkwkEE33OJc5x1LnHMx4JjbOmlKZFSmNB2hkOB0mfLcomh0bdVN+1PvH8IJu94JxOKmbPsCzMGFJngEk7pSJjvkZfX6UtFnQs0jfqyUeAH5J/Cj29KmOxc8O3kkY/wAoGAE4Y8EO6Y0xk9u845k6/TcFMDY9m1pU/wBISrdl2YZU2fpH0UT0x/THf+ymP+P/ANU9w81VbV0qDxg6eDZccMdAYGvcomp0iaCbzajd003DnkFooslLRoHJemw0zmAear/jMt5NA71YP+PQV8znE9nosztm23uAdZ6dRzxgZENujXESfHVcUellpZ/mWd0bx9I+a0wbNpaNA5Lw7MZwPckpsV8V5c5oWnh8E2CMRscaHHP2FQ6PTun77Xt5tPylSFn6aUHR6wd5jyKsVTYFnd7TG+CjbT0Hsbvdjkq9tnCldsPG8Jaht9jsnKRobTadVDM9HlnGLLzTvBLT5KHtWw7RRLhTqk3Tk7HDDkf7K+DDme9jdnwS2JxbcMAZNCa47rV7bahvXlS0hZ8dt1qImqBAzIKvGxejlstVGnXYaTadVoc0ue6YdjiA048JUX4WRhpwUo8ZFINpjrTe2W2EhY7NaLUYoUXP0LsA0c3GBPDNXjZXQCiwh1oeazvwxcp+Eye8xwVupUmtaGtAa0YAAQANwAyXWwf+kPxO5qy2h6NrW7F9aizgLz/HBo+KuXRfov8AwoJdU615ETdutaJmA2TuGJOmisqFcI2jcqDK8irQhCFNVoWf9Ndhmm82qmOw4jrW/hdkHjgcjxx1MaAk6tMOBa4Agggg4gg4EEblF7Q4UVJjy02FlD6TXtxAI44pFl1mUDkvfSDZzs245hL6VUuDQfap3QDdLp7QxMHPDGc1nVt6Wk4hpA5/e9KjCSnOsk8cXEMrz4K/1La1M37UGhWes6VDVrvL6p/Z+k1M6+OHxXDh3DcgYlp3q6MtxKVFodvVUobdYcnN8QVIUdrs3qBjI3KYkB3qz0JOqd01Vm7baNVw/pI0e8BzKj8NykZWjerm1s5ru43eqDV6aMGHWDuMphW6bz7DXu7vrCtbh3uOQVTsQwb1qBNMZkJJ+0aLdQsjr9IrU/2QG8zPkPqmVcWmp7dV0bhgPLFNx9GzO3JSTpGFu9apb+mFCnIkFVO37fvNNbJrnObz3AcT8lV7JYOrN66H7wde/ROK1U1i0FgYxuIaMZdESTywWrhMEYCTeZFLGx+JGKptfKDd3yIrjnairdaKlZ8uJDZwbOA3czxX0X6HrVf2ZTZMmi57D+q+P9rwO5YQLOMFqnoVt8VK9AnBzQ5o4sMHxDh+lSxUFRl2u9dw87dtrAKGi1tCELKWmhCEIQhCEIQhCEIQs69OFkv2Bj/9Os0nk5r2/EhYDWoS0d/35L6Q9Ln/AOXX50/+xq+etB3/ABK0sG3ajo8UhiHbMmXvVRDrMuqVlT6pmvWK8QtBUDM6k2ds2Vz/AIWRkpoZJRiuOGjO5UfqpAoMbNn2p5p1S2K1SFbJL2P2VJuHjB0UH4mQtsFNKWzmDRO6dmA0CXXqYDGjQJV0rnalJiiuuqSgXQU6VVlIhiHUxolnLx2S4UAlM3tVm6A23qLZQfoXweT+x5Xge5Vt2akdme2z8zfiFRI0OaQd4TEbiHA8CvpRCELza9GhCEIQv//Z">
+                </a><h4>Surgeries</h4>
+                <p></p>
+            </div>
+            <div>
+                <a href="addtocart.html"><img src="https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0"></a>
+                <h4>Value Store</h4>
+                <p>UPTO 50% OFF</p>
+            </div>
+        </div>
+    </div>
+    <div class="pic-ctn container">
+        <img src="https://thumbs.dreamstime.com/b/healthy-lifestyle-wellbeing-concept-set-inspirational-reminder-notes-155583550.jpg" alt="" class="pic" height="350px" width="680">
+        <img src="https://healthylifestylethroughcollegeandbeyond.wordpress.com/wp-content/uploads/2018/05/cropped-the-healthy-life.jpg" alt="" class="pic" width="650px" height="350px">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*-octbWHtxGdDLA7pYJYQGA.jpeg" alt="" class="pic" width="580px" height="350px">
+        <img src="https://img.freepik.com/free-photo/people-working-out-indoors-together-with-dumbbells_23-2149175410.jpg" alt="" class="pic" width="650px" height="350px">
+        <img src="https://cdn.pixabay.com/photo/2022/10/29/21/27/bicycle-7556157_1280.jpg" alt="" class="pic" height="350px" width="600px">
+    </div>
+
+    <div class="banners">
+    </div>
+
+
+    <div class="new-user-offer container">
+        <br/>
+        <h1 class="title">Offers Just for You</h1>
+
+        <div class="cards-layout">
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/37c262d84a5-25.jpg?dim=1024x0">
+                <p>Flat 25% OFF</p>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/81308cc59b5-FLAT_20.jpg?dim=1024x0">
+                <p>Test - Flat 20% OFF + up to Rs.1000 surprise cashback</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-lock"></i>
+                <p>Log in to view more offers</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="shop-categories container">
+        <h1 class="title">Shop by Categories</h1>
+        <div>
+
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/6d462f424a43372ea8b7b6f8ca13e052.png?f=png?dim=256x0">
+                <h4>Virus essentials</h4></a>
+            </div>
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/62e6d7551ecf3a5da1d2336c41cc0549.png?f=png?dim=256x0">
+                <h4>Health food and drinks</h4></a>
+            </div>
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/b4a3a67a59783e0ca738884c9acc8e7b.png?f=png?dim=256x0">
+                <h4>Personal care</h4></a>
+            </div>
+            
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/4209e1d247cd30fca1f619786fa3e9c1.png?f=png?dim=256x0">
+                <h4>Ayurvedic care</h4></a>
+            </div>
+
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ff5aaa03881e3016bf409f85b4e328aa.png?f=png?dim=256x0">
+                <h4>Skin care</h4></a>
+            </div>
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/8a45f5baa68e3b72ae631003faa97bdb.png?f=png?dim=256x0">
+                <h4>Beauty</h4></a>
+            </div>
+            <div class="clickme"><a href="addtocart.html">
+                <img
+                    src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/68ae87e29f4a3abbb8ed69fe7ecf057c.png?f=png?dim=256x0">
+                <h4>Home care</h4></a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="order-with-prescription">
+        <div>
+            <img src="https://assets.pharmeasy.in/apothecary/images/rx_upload.svg?dim=1024x0">
+            <div>
+                <h3>Order with Prescription</h3>
+                <p>Upload prescription and we will deliver your medicine</p>
+                <button>
+                    <i class="fa-solid fa-paperclip"></i>
+                    Upload
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <h3>How does this works?</h3>
+
+            <div>
+                <div>
+                    <h3>1</h3>
+                    <p>Upload a photo of your prescription</p>
+                </div>
+                <div>
+                    <h3>2</h3>
+                    <p>Add delivery address and place the order</p>
+                </div>
+                <div>
+                    <h3>3</h3>
+                    <p>We will call you to confirm the medicines</p>
+                </div>
+                <div>
+                    <h3>4</h3>
+                    <p>Now, sit back! your medicines will get delivered at your doorstep</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="new-launches container">
+        <h1 class="title">New Launches</h1>
+        <h4 class="subtitle">New wellness range just for you!</h4>
+
+        <div class="product-cards">
+        </div>
+    </div>
+
+
+    <div class="trending container">
+        <h1 class="title">Trending Near You</h1>
+        <h3 class="subtitle">Popular in your city</h3>
+
+        <div class="product-cards">
+        </div>
+    </div>
+
+
+    <div class="lab-tests container">
+        <h1 class="title">Lab Tests by Health Concern</h1>
+        <h3 class="subtitle">Powered by
+            <img src="https://assets.pharmeasy.in/apothecary/images/Thyrocare.webp?dim=1024x0">
+        </h3>
+
+        <div>
+            <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p>Recommended<br>
+                    by health experts</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <p>Report<br>in 24 hrs</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-house"></i>
+                <p>Home Sample<br>Pickup</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-vial"></i>
+                <p>World Class<br>Technologies & labs</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-shield"></i>
+                <p>Highly Skilled<br>Technicians</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-ribbon"></i>
+                <p>100% Safe &<br>Hygienic</p>
+            </div>
+        </div>
+
+        <div>
+            <img
+                src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/e9fec637561-Vitamins.jpg?dim=256x0">
+            <img
+                src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/f055b8d7606-Fever_Infection.jpg?dim=256x0">
+            <img
+                src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/0108134f09b-Health_Checkups.jpg?dim=256x0">
+            <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/686b12c5c64-Heart.jpg?dim=256x0">
+            <img
+                src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6c5765fb3e7-Diabetes.jpg?dim=256x0">
+            <img
+                src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/453e093976a-thyroid.png?dim=256x0">
+        </div>
+    </div>
+
+
+    <div class="become-plus-member">
+        <div>
+            <h2>Become a <span><i class="fa-solid fa-plus"></i> Plus</span> member</h2>
+            <p>And enjoy extra bachat on every order</p>
+            <hr>
+        </div>
+        <div>
+            <p>Save flat 5% extra on medicines & enjoy FREE delivery with PLUS membership</p>
+            <button>Explore Now<i class="fa-solid fa-angle-right"></i></button>
+        </div>
+        <div>
+            <img src="https://assets.pharmeasy.in/apothecary/_next/static/media/PlusFamily.22677720.png?dim=1024x0">
+        </div>
+    </div>
+
+
+    <div class="shop-by-concern container">
+        <h1 class="title">Shop by Concern</h1>
+        <h3 class="subtitle">Products are handpicked by experts</h3>
+
+        <div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/923a665cc6f-Skin_care.png?dim=128x0">
+                <h3>Skin Care</h3>
+            </div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/18d2e2ee86b-Vitamins.png?dim=128x0">
+                <h3>Vitamin & Supplements</h3>
+            </div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/0af9ac9f350-Diabetes.webp?dim=128x0">
+                <h3>Diabetes Care & Sugar Substitutes</h3>
+            </div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/24a0d2c733e-Heart.webp?dim=128x0">
+                <h3>Cardiac Care</h3>
+            </div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/68369c9df98-Pregnancy.webp?dim=128x0">
+                <h3>Baby & Mom Care</h3>
+            </div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/16ab65c0826-Covid.webp?dim=128x0">
+                <h3>Covid Care</h3>
+            </div>
+            <div>
+                <img
+                    src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/26bbd7a9e98-Lifestyle.webp?dim=128x0">
+                <h3>Lifestyle Disorders</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="freq-booked-lab-tests container">
+        <h1 class="title">Frequently Booked Lab Tests<span class="view-all"><a href="labtest.html">View All</a></span></h1>
+
+        <div class="product-banner">
+
+        </div>
+    </div>
+
+
+    <!-- Day 3 -->
+
+    <div class="payment-offers container">
+        <h1 class="title">Payment Offers</h1>
+
+        <div>
+        </div>
+    </div>
+
+
+    <div class="wellness-essentials container">
+        <h1 class="title">Wellness Essentials of the Week<span class="view-all"><a href="addtocart.html">View All</a></span></h1>
+        <h3 class="subtitle">Super charge your immunity with us</h3>
+
+        <div class="product-cards2">
+        </div>
+    </div>
+
+
+    <div class="featured-brands container">
+        <h1 class="title">Featured Brands<span class="view-all"><a href="addtocart.html">View All</a></span></h1>
+        <h3 class="subtitle">Pick from our favourite brands</h3>
+
+        <div class="brand-promo">
+        </div>
+        <div class="brand-offer">
+        </div>
+    </div>
+
+
+    <div class="deals-of-the-day container">
+        <h1 class="title">Deals of the Day <span class="timer"><i class="fa-regular fa-clock"></i> 06:00 HOURS LEFT,
+                HURRY!</span> <span class="view-all"><a href="addtocart.html">View All</a></span></h1>
+
+        <div class="product-cards">
+        </div>
+    </div>
+
+
+    <div class="spotlight container">
+        <h1 class="title">Spotlight<span class="view-all"><a href="addtocart.html">View All</a></span></h1>
+    </div>
+
+
+    <div class="health-articles container">
+        <h1 class="title">Health Articles <span class="view-all"><a href="labtest.html">View All</a></span></h1>
+        <h3 class="subtitle">Get up-to-date on our latest health updates</h3>
+
+        <div>
+        </div>
+    </div>
+
+
+    <div class="why-choose-us container">
+        <h1 class="title">Why Choose Us?</h1>
+
+        <div>
+            <div>
+                <img src="https://assets.pharmeasy.in/apothecary/images/family.svg?dim=96x0">
+                <div>
+                    <h1>32 Million+</h1>
+                    <p>Registered users as of Mar 31, 2022</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/apothecary/images/deliveryBoy.svg?dim=96x0">
+                <div>
+                    <h1>36 Million+</h1>
+                    <p>Orders on Medipedia till date </p>
+                </div>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/apothecary/images/pincodeServed.svg?dim=96x0">
+                <div>
+                    <h1>99000+</h1>
+                    <p>Unique items sold last 3 months</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/apothecary/images/locationMarker.svg?dim=96x0">
+                <div>
+                    <h1>19500+</h1>
+                    <p>Pin codes serviced last 3 months</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="customer-review container">
+        <h1 class="title">What Our Customers have to Say</h1>
+
+        <div class="reviews">
+        </div>
+    </div>
+
+
+
+
+    <div class="FAQ container">
+        <h5>
+            <b>Top-Selling Healthcare Products:</b>
+            <span>Accu-Chek Active - 100 Strips</span>
+            |
+            <span>Supradyn Multivitamin Tablets</span>
+            |
+            <span>DR Morepen BG 03 - 50 Strips</span>
+            |
+            <span>Dettol Antiseptic Liquid</span>
+            |
+            <span>Ensure Diabetes Care Vanilla Sugar Free Jar</span>
+            |
+            <span>Dettol Instant Hand Sanitizer</span>
+            |
+            <span>Everherb Shilajit</span>
+            |
+            <span>Softovac SF Powder</span>
+            |
+            <span>Pediasure Premium Chocolate Refill</span>
+        </h5>
+        <h5>
+            <b>Top-Selling Medicines:</b>
+            <span>Dolovera Gel</span>
+            |
+            <span>Neurobion Forte</span>
+            |
+            <span>Chymoral Forte</span>
+            |
+            <span>Crocin Advance</span>
+            |
+            <span>Soframycin</span>
+            |
+            <span>Dexorange</span>
+            |
+            <span>Becadexamin</span>
+            |
+            <span>Folvite</span>
+            |
+            <span>Livogen</span>
+            |
+            <span>Becosules</span>
+            |
+            <span>Fourderm</span>
+            |
+            <span>Nurokind Plus</span>
+            |
+            <span>Burnol</span>
+            |
+            <span>Crocin 650</span>
+            |
+            <span>Mintop 5</span>
+            |
+            <span>Thrombophob</span>
+            |
+            <span>Evion 600</span>
+        </h5>
+        
+
+        <h4>Your One-Stop Online Pharmacy - Medipedia</h4>
+
+        <h5>
+            <b>We've got India Covered!</b>
+            <br>
+            <p></p>
+            We now deliver in 1000+ cities and towns across 22000+ pin codes. We thereby cover every nook and corner of
+            the country! The major cities in which we deliver include Mumbai, Kolkata, Delhi, Bengaluru, Ahmedabad,
+            Hyderabad, Chennai, Thane, Howrah, Pune, Gurgaon, Navi Mumbai, Jaipur, Noida, Lucknow, Ghaziabad & Vadodara.
+        </h5>
+        
+        <h5>
+            <b>How Are We Making Lives Simpler With Our Online Medical Store?</b>
+            <br>
+            <p></p>
+            Our doorstep delivery service is available in PAN-India across top cities like Bangalore, Delhi, Mumbai,
+            Kolkata, Hyderabad, Gurgaon, Noida, Pune, etc. Our online medical store also allows you to choose from 1
+            lakh+ products including OTC products and medical equipment. Medipedia is a one-stop online medical platform
+            where you can also book diagnostic tests including blood tests, full-body checkups, and other preventive
+            health check-ups at an affordable cost, right from the comfort of your home. We have partnered with trusted
+            & certified labs that arrange for a sample pick-up from the convenience of your home. They also provide you
+            with timely reports.
+        </h5>
+        <h5>
+            <b>Why Are We The Most Preferred Online Pharmacy?</b>
+            <br>
+            <p></p>
+            Lucrative offers on our platform allow you to make payment online and via various payment wallets at a
+            discounted price. Alternatively, you can also choose to pay cash on delivery as we deliver the products at
+            your doorstep. We cater to all your pharmaceutical needs and also make ordering medicines online a
+            hassle-free experience for you. We connect you only with registered retail pharmacies & certified diagnostic
+            labs. We ensure that healthcare is affordable to all and make the process of ordering online simple.
+        </h5>
+        <h5>
+            <b>Sit Back & Relax While You Get Your Essentials Delivered Every Month!</b>
+            <br>
+            <p></p>
+            It’s tough to remember to refill every month, especially in the case of chronic diseases. PharmEasy’s
+            subscription service not only ensures that you are reminded of your refills but also makes sure that you are
+            never out on your medical essentials. You will get a reminder every month and your order will be delivered
+            at your convenience!
+        </h5>
+        <h5>
+            <b>Access medical and health information:</b>
+            <br>
+            <p></p>
+            Medipedia delivers reliable and accurate medical information that has been carefully written, vetted and
+            validated by our health experts. Our specialists curate high-quality and most reliable literature about
+            medicines, illnesses, lab tests, Ayurvedic and over the counter health products.
+        </h5>
+        <h5>
+            <b>We Believe in ‘Simplifying Healthcare, Impacting Lives!’</b>
+        </h5>
+    </div>
+
+
+
+
+    <body>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Partner with Medipedia</a></li>
+                            <li><a href="#">Sell at Medipedia</a></li>
+                    </div>
+                    </ul>
+                    <div class="footer-col">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="#">Order Medicine</a></li>
+                            <li><a href="#">Healthcare Products</a></li>
+                            <li><a href="#">Lab Tests</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Featured Categories</h3>
+                        <ul>
+                            <li><a href="#">Covid Essentials</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                            <li><a href="#">Health Food and Drinks</a></li>
+                            <li><a href="#">Beauty</a></li>
+                            <li><a href="#">Skin Care</a></li>
+                            <li><a href="#">Home Care</a></li>
+                            <li><a href="#">Ayurvedic Care</a></li>
+                            <li><a href="#">Sexual Wellness</a></li>
+                            <li><a href="#">Fitness & Supplements</a></li>
+                            <li><a href="#">Mother & Baby Care</a></li>
+                            <li><a href="#">Healthcare Devices</a></li>
+                            <li><a href="#">Health Condition</a></li>
+                            <li><a href="#">Diabetic Care</a></li>
+                            <li><a href="#">Elderly Care</a></li>
+                            <li><a href="#">Accessories And Wearables</a></li>
+                            <li><a href="#">Value Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Need Help</h3>
+                        <ul>
+                            <li><a href="#">Browse All Medicines</a></li>
+                            <li><a href="#">Browse All Molecules</a></li>
+                            <li><a href="#">Browse All Cities & Areas</a></li>
+                            <li><a href="#">Browse All Stores</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Policy Info</h3>
+                        <ul>
+                            <li><a href="#">Editorial Policy</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Vulnerability Disclosure Policy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Customer Supprt Policy</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <ul>
+                            <h3>Follow us </h3>
+                            <div class="social-link">
+                    <li><img src="https://assets.pharmeasy.in/apothecary/images/Instagram.svg?dim=32x0"></li>
+                    <li><img src="https://assets.pharmeasy.in/apothecary/images/facebook.svg?dim=32x0"></li>
+                    <li><img src="https://assets.pharmeasy.in/apothecary/images/Youtube.svg?dim=32x0"></li>
+                    <li><img src="https://assets.pharmeasy.in/apothecary/images/Twitter.svg?dim=32x0"></li>     
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    </html>    <div class="floating-button">
+        <i class="fa-solid fa-phone"></i>
+    </div>
+
+
+
+    <div class="sidebar-background">
+        <div class="pincode-sidebar">
+            <i class="fa-solid fa-xmark close" id="close"></i>
+            <h1>Choose your<br>Location</h1>
+            <form>
+                <input type="number" id="pincode" placeholder="Enter PIN Code">
+                <input type="submit" value="Check">
+            </form>
+
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/ff969f07.svg">
+                <h3>Login to View Address</h3>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/90ee736b.svg">
+                <p>Serving more than 1,000 towns and cities in India.</p>
+            </div>
+            <div>
+                <img
+                    src="https://assets.pharmeasy.in/web-assets/dist/0c22e009.svg?dim=0x32&dpr=0.6666666865348816&q=100">
+                <p>Over 30,00,000 orders safely delivered<a
+                        href="https://pharmeasy.in/blog/5-step-safety-measures-were-taking-while-delivering-medicines/">Know
+                        More</a></p>
+            </div>
+        </div>
+
+        <div class="login-sidebar" id="login-sidebar">
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png">
+                <img src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg">
+            </div>
+            <i class="fa-solid fa-xmark login-close"></i>
+            <h3>Quick login / Register</h3>
+            <form>
+                <div>
+                    <label for="phone">+91</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+                <input type="submit" value="Send OTP">
+            </form>
+            <p>By clicking continue, you agree with our Privacy Policy</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
